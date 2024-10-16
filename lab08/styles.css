@@ -1,56 +1,86 @@
+/* Body and Global Settings */
 body {
-    background-color: #f5f5f5; 
-    color: #333333; 
+    background-color: #f5f5f5; /* Light Gray */
+    color: #333333; /* Dark Gray */
     font-family: Arial, sans-serif;
-  }
-  
-  nav {
-    background-color: #003366; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #003366; /* Dark Blue */
     padding: 10px;
     margin-bottom: 30px;
-  }
-  
-  nav a {
-    color: #ffffff; 
+}
+
+nav a {
+    color: #ffffff; /* White */
     text-decoration: none;
     margin-right: 10px;
-  }
-  
-  nav a:hover {
-    background-color: #0066cc; 
-    color: #ffffff; 
+}
+
+nav a:hover {
+    background-color: #0066cc; /* Light Blue */
+    color: #ffffff;
     padding: 5px;
-  }
-  
-  h1 {
-    color: #000000; 
-  }
-  
-  main {
+}
+
+/* Header Styling */
+h1, h2 {
+    color: #000000; /* Black */
+}
+
+h1 {
+    margin: 20px;
+}
+
+h2 {
+    margin: 20px 20px 10px 20px;
+}
+
+/* Main Content Styling */
+main {
     padding: 20px;
-  }
-  
-  .float-left {
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+/* Container Layout for Floats */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.float-left {
     float: left;
-    margin-right: 15px; 
-  }
-  
-  .float-right {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.float-right {
     float: right;
-    margin-left: 15px; 
-  }
-  
-  .clearfix::after {
+    width: 300px;
+}
+
+.float-image {
+    width: 100%;
+    height: auto;
+}
+
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  footer {
+}
+
+/* Footer Styling */
+footer {
     text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f5f5f5; 
+    padding: 20px;
+    background-color: #f5f5f5;
     font-size: 0.9em;
-  }
-  
+    margin-top: 20px;
+}
