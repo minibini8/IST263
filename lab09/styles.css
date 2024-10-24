@@ -185,12 +185,6 @@ iframe {
     border-radius: 15px;
 }
 
-.skillstable th, .skillstable td {
-    border: 2px solid #006600; /* Table border color */
-    padding: 10px;
-    background-color: #99ff99; /* Green background for table */
-}
-
 .skillsimage {
     flex: 1;
     text-align: center;
