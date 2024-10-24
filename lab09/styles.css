@@ -171,15 +171,8 @@ iframe {
 /* Flexbox for Skills Page */
 .firstrow {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffe4c4; /* Light beige background */
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
 }
 
-/* Skills Table */
 .skillstable {
     flex: 1;
     margin: 0 auto;
@@ -187,32 +180,30 @@ iframe {
 
 .skillstable table {
     margin: 0 auto;
-    border-collapse: collapse;
-    background-color: #e0f7fa; /* Light blue background for the table */
-    padding: 10px;
-    border-radius: 10px;
+    background-color: #cce5ff; /* Light blue background */
+    border: 2px solid #003366; /* Border color */
+    border-radius: 15px;
 }
 
-th, td {
+.skillstable th, .skillstable td {
+    border: 2px solid #006600; /* Table border color */
     padding: 10px;
-    border: 1px solid #dddddd;
-    text-align: left;
+    background-color: #99ff99; /* Green background for table */
 }
 
-/* Skills Image */
 .skillsimage {
     flex: 1;
     text-align: center;
 }
 
 .skillsimage img {
-    width: 300px; /* Increase image size */
+    width: 200px; /* Increase the size of the image */
     height: auto;
-    margin: 0 auto;
-    display: block;
 }
 
-/* Contact Page Background */
-.row {
-    background-color: #ffe4c4; /* Light beige background for first row */
+/* Background Styling for Skills Section */
+.firstrow {
+    background-color: #ffcc99; /* Light peach background */
+    padding: 20px;
+    border-radius: 15px;
 }
