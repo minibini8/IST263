@@ -24,7 +24,7 @@ nav a:hover {
     padding: 5px;
 }
 
-h1 {
+h1, h3 {
     color: #000000; /* Black */
     text-align: center;
     margin: 30px;
@@ -52,6 +52,27 @@ p {
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+.float-left {
+    float: left;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.float-right {
+    float: right;
+    width: 300px;
+}
+
+.float-image {
+    width: 200px; /* Adjust image size */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.clearfix {
+    clear: both;
 }
 
 footer {
@@ -86,23 +107,82 @@ a:visited {
     color: #cccccc; /* Example visited link color */
 }
 
-/* Flexbox for Skills Page */
-.firstrow {
+/* Added Flexbox and Article Layout */
+.part2 {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+
+.article1 {
+    flex: 2;
+    order: 3;
+    background-color: #cce5ff; /* Light blue background */
+    border-radius: 1em; /* Rounded corners */
+}
+
+.article2 {
+    flex: 1;
+    order: 2;
+}
+
+.article3 {
+    flex: 1;
+    order: 1;
+}
+
+.article1, .article2, .article3 {
+    margin: 10px;
+}
+
+.part2 article {
     padding: 20px;
 }
 
-.skillstable {
-    width: 50%;
+/* Flexbox for Contact Page */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #f2f2f2; /* Light gray for even rows */
+    border-radius: 10px;
 }
 
-.skillsimage {
-    width: 50%;
-    text-align: center;
+.column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff; /* White */
+    border-radius: 10px;
+}
+
+/* Form and Map Styling */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+/* Flexbox for Skills Page */
+.firstrow {
+    display: flex;
+}
+
+.skillstable {
+    flex: 1;
+    margin: 0 auto;
 }
 
 .skillstable table {
     margin: 0 auto;
+}
+
+.skillsimage {
+    flex: 1;
+    text-align: center;
 }

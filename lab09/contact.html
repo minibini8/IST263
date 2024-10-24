@@ -7,56 +7,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="skills.html">Skills</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
 
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="skills.html">Skills</a> |
-    <a href="contact.html">Contact</a>
-</nav>
+    <h3>Contact</h3>
 
-<h3>Contact</h3>
+    <div class="row">
+        <div class="column">
+            <p>Christopher Biniaris<br>
+            Syracuse University<br>
+            Huntington Hall 0308<br>
+            Syracuse, NY 13244-3080<br>
+            Email: <a href="mailto:cabinair@syr.edu">cabinair@syr.edu</a></p>
+        </div>
 
-<!-- First Row with two columns -->
-<div class="row">
-    <div class="column">
-        <!-- Address -->
-        Christopher Biniaris<br>
-        Syracuse University<br>
-        Huntington Hall 0308<br>
-        Syracuse, NY 13244-3080<br>
-        Email: <a href="mailto:cabinair@syr.edu">cabinair@syr.edu</a>
+        <div class="column">
+            <a href="https://www.linkedin.com/in/christopher-biniaris-901b2b02" target="_blank">My LinkedIn Profile</a><br><br>
+            <img src="./pictures/logo-sized.png" alt="LinkedIn Logo" style="width:50px; height:50px;">
+        </div>
     </div>
 
-    <div class="column">
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/christopher-biniaris-901b2b02" target="_blank">My LinkedIn Profile</a><br><br>
-        <img src="./pictures/logo-sized.png" alt="LinkedIn Logo" style="width:50px; height:50px;">
-    </div>
-</div>
+    <div class="row">
+        <div class="column">
+            <form action="https://formspree.io/f/xrkwbqqb" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
 
-<!-- Second Row with two columns -->
-<div class="row">
-    <div class="column">
-        <!-- Contact Form -->
-        <form action="https://formspree.io/f/xrknwbpg" method="POST">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
-            
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-            
-            <input type="submit" value="Send">
-        </form>
-    </div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
 
-    <div class="column">
-        <!-- Google Maps -->
-        <iframe src="https://www.google.com/maps/embed?pb=1m18...(your map URL here)" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-</div>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
 
+                <input type="submit" value="Send">
+            </form>
+        </div>
+
+        <div class="column">
+            <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
 </body>
 </html>
