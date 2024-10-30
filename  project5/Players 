@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Players and Key Contributors</title>
+</head>
+<body>
+  <header>
+    <h1>Star Players and Key Contributors</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="rankings.html">Team Rankings</a>
+      <a href="players.html">Star Players</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Nikola Jokić</h2>
+      <p>Team: Denver Nuggets</p>
+      <p>Position: Center</p>
+      <p>Stats: 25.1 PPG, 11.7 RPG, 10.3 APG</p>
+    </section>
+    <section>
+      <h2>Jayson Tatum</h2>
+      <p>Team: Boston Celtics</p>
+      <p>Position: Small Forward</p>
+      <p>Stats: 30.5 PPG, 8.1 RPG, 4.5 APG</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 NBA Team Rankings</p>
+  </footer>
+</body>
+</html>

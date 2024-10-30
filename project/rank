@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NBA Team Rankings</title>
+</head>
+<body>
+  <header>
+    <h1>NBA Team Rankings</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="rankings.html">Team Rankings</a>
+      <a href="players.html">Star Players</a>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2>Denver Nuggets</h2>
+      <p>Record: 50 Wins, 12 Losses</p>
+      <p>Star Player: Nikola Jokić</p>
+    </article>
+    <article>
+      <h2>Boston Celtics</h2>
+      <p>Record: 48 Wins, 14 Losses</p>
+      <p>Star Player: Jayson Tatum</p>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2024 NBA Team Rankings</p>
+  </footer>
+</body>
+</html>
+
