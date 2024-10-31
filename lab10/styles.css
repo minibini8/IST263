@@ -31,7 +31,7 @@ h1, h3 {
 }
 
 h2 {
-    margin: 20px 20px 20px 20px;
+    margin: 20px;
 }
 
 main {
@@ -140,6 +140,7 @@ a:visited {
 /* Flexbox for Contact Page */
 .row {
     display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
     justify-content: space-between;
     margin: 20px auto;
     padding: 20px;
@@ -165,12 +166,17 @@ form {
 }
 
 iframe {
+    width: 100%; /* Makes the map responsive */
+    height: 450px;
     border-radius: 10px;
 }
 
 /* Flexbox for Skills Page */
 .firstrow {
     display: flex;
+    background-color: #ffcc99; /* Light peach background */
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .skillstable {
@@ -195,9 +201,8 @@ iframe {
     height: auto;
 }
 
-/* Background Styling for Skills Section */
-.firstrow {
-    background-color: #ffcc99; /* Light peach background */
-    padding: 20px;
-    border-radius: 15px;
+/* Responsive Image */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
 }
