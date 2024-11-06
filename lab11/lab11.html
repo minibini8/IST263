@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <title>Lab 11 - JavaScript Practice</title>
     <script>
-        alert('You won!');
+        function WinnerMessage() {
+            alert('You won!');
+        }
+
+        function TryAgain() {
+            alert('Wrong Shell - Try Again');
+        }
     </script>
 </head>
 <body>
     <h1>JavaScript Practice</h1>
+    <button onclick="WinnerMessage()">Click for Winner Message</button>
+    <button onclick="TryAgain()">Click to Try Again</button>
 </body>
 </html>
