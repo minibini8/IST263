@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 11 Preview - JavaScript Practice (Messages)</title>
+    <style>
+        .container {
+            display: flex;
+        }
+    </style>
+    <script>
+        function WinnerMessage() {
+            document.getElementById("messages").innerHTML = 'You Won!';
+        }
+
+        function TryAgain() {
+            document.getElementById("messages").innerHTML = 'Wrong Shell - Try Again';
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Practice</h1>
+    <div id="messages"></div>
+    <h1>Choose a Walnut</h1>
+    <div class="container">
+        <img src="Nut.jpg" alt="first walnut" id="first" onclick="WinnerMessage();">
+        <img src="Nut.jpg" alt="second walnut" id="second" onclick="TryAgain();">
+        <img src="Nut.jpg" alt="third walnut" id="third" onclick="TryAgain();">
+    </div>
+</body>
+</html>
