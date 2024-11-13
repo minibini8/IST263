@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation Task</title>
+</head>
+<body>
+    <div id="schoolText" style="cursor: pointer;">Syracuse University</div>
+
+    <script>
+        const schoolDiv = document.getElementById("schoolText");
+
+        schoolDiv.addEventListener("click", function() {
+            schoolDiv.innerHTML = "Orange Nation";
+            schoolDiv.style.color = "orange";
+        });
+    </script>
+</body>
+</html>
