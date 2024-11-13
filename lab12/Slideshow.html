@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Lab 12 Slideshow</title>
     <style>
         body {
@@ -12,13 +12,41 @@
         #slideshow-container {
             background-color: #000000;
             width: 1200px;
-            margin: auto; /* centers the container */        
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        #bigimages {margin-right: 100px; float: left;}
-        #planetinfo {padding: 100px; float: left;}
-        #thumbnails {width: 840px; margin: auto; padding-top: 20px; clear: both;}
-        #mercurythumb, #venusthumb, #earththumb, #marsthumb, #jupiterthumb, #saturnthumb, #uranusthumb, #neptunethumb {
+        #content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        #bigimages {
+            flex: 1;
+            max-width: 60%;
+        }
+        #bigimages img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        #planetinfo {
+            flex: 1;
+            padding-left: 20px;
+            max-width: 40%;
+        }
+        #thumbnails {
+            width: 840px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #thumbnails img {
             width: 100px;
+            cursor: pointer;
         }
 
         /* Hide all planets and info by default except Mercury */
@@ -28,7 +56,6 @@
         }
     </style>
     <script>
-        // Function to hide all planets and their information
         function hideAllPlanets() {
             document.getElementById("mercury").style.display = "none";
             document.getElementById("venus").style.display = "none";
@@ -49,7 +76,6 @@
             document.getElementById("neptuneinfo").style.display = "none";
         }
 
-        // Function to show a specific planet and its information
         function showPlanet(planet) {
             hideAllPlanets();
             document.getElementById(planet).style.display = "block";
@@ -59,49 +85,51 @@
 </head>
 <body>
     <div id="slideshow-container">
-        <div id="bigimages">
-            <img src="./Slideshow_files/mecury.jpg" alt="mercury" id="mercury">
-            <img src="./Slideshow_files/venus.jpg" alt="venus" id="venus">
-            <img src="./Slideshow_files/earth.jpg" alt="earth" id="earth">
-            <img src="./Slideshow_files/mars.jpg" alt="mars" id="mars">
-            <img src="./Slideshow_files/jupiter.jpg" alt="jupiter" id="jupiter">
-            <img src="./Slideshow_files/saturn.jpg" alt="saturn" id="saturn">
-            <img src="./Slideshow_files/uranus.jpg" alt="uranus" id="uranus">
-            <img src="./Slideshow_files/neptune.jpg" alt="neptune" id="neptune">
-        </div>
-        <div id="planetinfo">        
-            <h1>Planets Slideshow</h1>
-            <div id="mercuryinfo">
-                <h2>Mercury</h2>
-                <p>Mercury is the smallest and innermost planet in the Solar System...</p>
+        <div id="content">
+            <div id="bigimages">
+                <img src="./Slideshow_files/mecury.jpg" alt="mercury" id="mercury">
+                <img src="./Slideshow_files/venus.jpg" alt="venus" id="venus">
+                <img src="./Slideshow_files/earth.jpg" alt="earth" id="earth">
+                <img src="./Slideshow_files/mars.jpg" alt="mars" id="mars">
+                <img src="./Slideshow_files/jupiter.jpg" alt="jupiter" id="jupiter">
+                <img src="./Slideshow_files/saturn.jpg" alt="saturn" id="saturn">
+                <img src="./Slideshow_files/uranus.jpg" alt="uranus" id="uranus">
+                <img src="./Slideshow_files/neptune.jpg" alt="neptune" id="neptune">
             </div>
-            <div id="venusinfo">
-                <h2>Venus</h2>
-                <p>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty...</p>
-            </div>
-            <div id="earthinfo">
-                <h2>Earth</h2>
-                <p>Earth is the third planet from the Sun and the only astronomical object known to harbor life...</p>
-            </div>
-            <div id="marsinfo">
-                <h2>Mars</h2>
-                <p>Mars is a terrestrial planet with a thin atmosphere, with surface features reminiscent of the Moon...</p>
-            </div>
-            <div id="jupiterinfo">
-                <h2>Jupiter</h2>
-                <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System...</p>
-            </div>
-            <div id="saturninfo">
-                <h2>Saturn</h2>
-                <p>Saturn is the sixth planet from the Sun and the second-largest in the Solar System...</p>
-            </div>
-            <div id="uranusinfo">
-                <h2>Uranus</h2>
-                <p>Uranus is the seventh planet from the Sun, with a name referencing the Greek god of the sky...</p>
-            </div>
-            <div id="neptuneinfo">
-                <h2>Neptune</h2>
-                <p>Neptune is the eighth and farthest-known Solar planet from the Sun...</p>
+            <div id="planetinfo">        
+                <h1>Planets Slideshow</h1>
+                <div id="mercuryinfo">
+                    <h2>Mercury</h2>
+                    <p>Mercury is the smallest and innermost planet in the Solar System...</p>
+                </div>
+                <div id="venusinfo">
+                    <h2>Venus</h2>
+                    <p>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty...</p>
+                </div>
+                <div id="earthinfo">
+                    <h2>Earth</h2>
+                    <p>Earth is the third planet from the Sun and the only astronomical object known to harbor life...</p>
+                </div>
+                <div id="marsinfo">
+                    <h2>Mars</h2>
+                    <p>Mars is a terrestrial planet with a thin atmosphere, with surface features reminiscent of the impact craters of the Moon...</p>
+                </div>
+                <div id="jupiterinfo">
+                    <h2>Jupiter</h2>
+                    <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System...</p>
+                </div>
+                <div id="saturninfo">
+                    <h2>Saturn</h2>
+                    <p>Saturn is the sixth planet from the Sun and the second-largest in the Solar System...</p>
+                </div>
+                <div id="uranusinfo">
+                    <h2>Uranus</h2>
+                    <p>Uranus is the seventh planet from the Sun...</p>
+                </div>
+                <div id="neptuneinfo">
+                    <h2>Neptune</h2>
+                    <p>Neptune is the eighth and farthest-known Solar planet from the Sun...</p>
+                </div>
             </div>
         </div>
         <div id="thumbnails">
