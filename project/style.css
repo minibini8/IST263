@@ -1,0 +1,69 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text */
+    text-align: center; /* Centers all text */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    padding: 10px 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  main img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: block; /* Ensures the image is centered */
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333; /* Matches header */
+    color: white; /* White text */
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column; /* Stack navigation links vertically */
+      text-align: center;
+    }
+  
+    nav {
+      margin-top: 10px;
+    }
+  
+    nav a {
+      margin: 5px; /* Add spacing between links */
+    }
+  }
+  
