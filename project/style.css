@@ -37,7 +37,7 @@ body {
   }
   
   main img {
-    max-width: 100%;
+    max-width: 100%; /* Ensure image is responsive */
     height: auto;
     margin-top: 20px;
     display: block; /* Ensures the image is centered */
