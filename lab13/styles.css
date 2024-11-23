@@ -78,7 +78,8 @@ p {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #003366; /* Dark Blue Footer */
+    color: #ffffff; /* White text */
     margin-top: 20px;
 }
 
@@ -95,14 +96,20 @@ th, td {
     text-align: left;
 }
 
-.row {
+table th {
+    background-color: #003366; /* Dark blue for headers */
+    color: white; /* White text for contrast */
+}
+
+table td {
     background-color: #ffffff;
 }
 
-.evenrow {
-    background-color: #f2f2f2; /* Light gray for even rows */
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for alternate rows */
 }
 
+/* Styling Links */
 a:visited {
     color: #cccccc; /* Example visited link color */
 }
@@ -140,7 +147,7 @@ a:visited {
 /* Flexbox for Skills Page */
 .firstrow {
     display: flex;
-    background-color: #ffcc99; /* Light peach background */
+    background-color: #ffa94d; /* Darker peach for better contrast */
     padding: 20px;
     border-radius: 15px;
 }
@@ -174,9 +181,28 @@ a:visited {
     border-radius: 10px;
 }
 
-/* Styling for even columns */
+/* Skip to Content Button */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #003366;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 1000;
+    border-radius: 5px;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 10px;
+    left: 10px;
+}
+
+/* Accessibility Enhancements for Tables */
 .evenrow {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* Light gray for even rows */
 }
 
 /* Wrapper for Flexbox Grids */
@@ -205,37 +231,4 @@ a:visited {
     nav span {
         display: none; /* Hides the separator in smaller viewports */
     }
-}
-
-/* Skip to Content Button */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 10px;
-    background: #003366;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    z-index: 1000;
-    border-radius: 5px;
-    transition: top 0.3s ease;
-}
-
-.skip-link:focus {
-    top: 10px;
-    left: 10px;
-}
-
-/* Accessibility Enhancements for Tables */
-table th {
-    background-color: #003366; /* Dark blue for headers */
-    color: white; /* White text for contrast */
-}
-
-table td {
-    background-color: #ffffff;
-}
-
-table tr:nth-child(even) {
-    background-color: #f2f2f2; /* Light gray for alternate rows */
 }
