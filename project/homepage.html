@@ -35,38 +35,15 @@
             }
         ];
 
-        // Featured team data
+        // Pick a random featured team
         const featuredTeam = teams[Math.floor(Math.random() * teams.length)];
 
-        // Schedule data
-        const games = [
-            "New Orleans Pelicans @ Atlanta Hawks - Dec 2, 2024, 4:30 PM PST",
-            "Miami Heat @ Boston Celtics - Dec 2, 2024, 4:30 PM PST",
-            "Los Angeles Lakers @ Minnesota Timberwolves - Dec 2, 2024, 5:00 PM PST",
-            "Brooklyn Nets @ Chicago Bulls - Dec 2, 2024, 5:00 PM PST",
-            "Philadelphia 76ers @ Charlotte Hornets - Dec 3, 2024, 4:00 PM PST",
-            "Washington Wizards @ Cleveland Cavaliers - Dec 3, 2024, 4:00 PM PST",
-            "Milwaukee Bucks @ Detroit Pistons - Dec 3, 2024, 4:00 PM PST",
-            "Orlando Magic @ New York Knicks - Dec 3, 2024, 4:30 PM PST",
-            "Indiana Pacers @ Toronto Raptors - Dec 3, 2024, 4:30 PM PST",
-            "Utah Jazz @ Oklahoma City Thunder - Dec 3, 2024, 5:00 PM PST"
-        ];
-
-        // Populate data dynamically on load
+        // Dynamically populate the featured team data
         document.addEventListener("DOMContentLoaded", () => {
-            // Update featured team
             document.getElementById("featured-team-name").textContent = featuredTeam.name;
             document.getElementById("featured-team-description").textContent = featuredTeam.description;
             document.getElementById("featured-team-image").src = featuredTeam.image;
             document.getElementById("featured-team-image").alt = featuredTeam.name;
-
-            // Update upcoming games
-            const scheduleList = document.getElementById("schedule");
-            games.forEach((game) => {
-                const listItem = document.createElement("li");
-                listItem.textContent = game;
-                scheduleList.appendChild(listItem);
-            });
         });
     </script>
 </head>
@@ -80,47 +57,54 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="intro-section">
             <h2>Welcome to NBA Team Rankings</h2>
             <p>Your ultimate destination for in-depth analysis and rankings of the best NBA teams and players!</p>
             <img src="Homepage.jpg" alt="NBA Homepage Image" width="400">
         </section>
-        <section>
+        <section class="featured-team-section">
             <h2>Featured Team: <span id="featured-team-name"></span></h2>
             <p id="featured-team-description"></p>
             <img id="featured-team-image" src="" alt="" width="400">
         </section>
-        <section>
+        <section class="player-highlights">
             <h2>Player Highlights</h2>
             <div class="video-container">
-                <!-- Nikola Jokic Highlights -->
                 <iframe 
                     width="560" 
                     height="315" 
-                    src="https://www.youtube.com/embed/vlwCMHjm4BA?si=h9dv4-D2N8H7sBan" 
+                    src="https://www.youtube.com/embed/vlwCMHjm4BA" 
                     title="Nikola Jokic Highlights" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerpolicy="strict-origin-when-cross-origin" 
                     allowfullscreen>
                 </iframe>
-                
-                <!-- Jayson Tatum Highlights -->
                 <iframe 
                     width="560" 
                     height="315" 
-                    src="https://www.youtube.com/embed/e3AgSmYvHlU?si=AjORm6ieyHW8Vmvd" 
+                    src="https://www.youtube.com/embed/e3AgSmYvHlU" 
                     title="Jayson Tatum Highlights" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
                     allowfullscreen>
                 </iframe>
             </div>
         </section>
-        <section>
+        <section class="upcoming-games">
             <h2>Upcoming Games</h2>
-            <ul id="schedule"></ul>
+            <ul>
+                <li>New Orleans Pelicans @ Atlanta Hawks - Dec 2, 2024</li>
+                <li>Miami Heat @ Boston Celtics - Dec 2, 2024</li>
+                <li>Los Angeles Lakers @ Minnesota Timberwolves - Dec 2, 2024</li>
+                <li>Brooklyn Nets @ Chicago Bulls - Dec 2, 2024</li>
+                <li>Philadelphia 76ers @ Charlotte Hornets - Dec 3, 2024</li>
+                <li>Washington Wizards @ Cleveland Cavaliers - Dec 3, 2024</li>
+                <li>Milwaukee Bucks @ Detroit Pistons - Dec 3, 2024</li>
+                <li>Orlando Magic @ New York Knicks - Dec 3, 2024</li>
+                <li>Indiana Pacers @ Toronto Raptors - Dec 3, 2024</li>
+                <li>Utah Jazz @ Oklahoma City Thunder - Dec 3, 2024</li>
+            </ul>
         </section>
     </main>
     <footer>
