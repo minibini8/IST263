@@ -16,51 +16,116 @@
         </nav>
     </header>
     <main>
-        <h2>Best Players and Their PPG</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Team</th>
-                    <th>Best Player</th>
-                    <th>PPG (2023-24)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Atlanta Hawks</td><td>Trae Young</td><td>26.2</td></tr>
-                <tr><td>Boston Celtics</td><td>Jayson Tatum</td><td>30.1</td></tr>
-                <tr><td>Brooklyn Nets</td><td>Mikal Bridges</td><td>19.6</td></tr>
-                <tr><td>Charlotte Hornets</td><td>LaMelo Ball</td><td>31.1</td></tr>
-                <tr><td>Chicago Bulls</td><td>Zach LaVine</td><td>24.8</td></tr>
-                <tr><td>Cleveland Cavaliers</td><td>Donovan Mitchell</td><td>23.6</td></tr>
-                <tr><td>Dallas Mavericks</td><td>Luka Dončić</td><td>29.0</td></tr>
-                <tr><td>Denver Nuggets</td><td>Nikola Jokić</td><td>25.1</td></tr>
-                <tr><td>Detroit Pistons</td><td>Cade Cunningham</td><td>20.0</td></tr>
-                <tr><td>Golden State Warriors</td><td>Stephen Curry</td><td>25.0</td></tr>
-                <tr><td>Houston Rockets</td><td>Alperen Şengün</td><td>21.1</td></tr>
-                <tr><td>Indiana Pacers</td><td>Tyrese Haliburton</td><td>20.7</td></tr>
-                <tr><td>Los Angeles Clippers</td><td>Kawhi Leonard</td><td>23.0</td></tr>
-                <tr><td>Los Angeles Lakers</td><td>Anthony Davis</td><td>25.0</td></tr>
-                <tr><td>Memphis Grizzlies</td><td>Ja Morant</td><td>26.0</td></tr>
-                <tr><td>Miami Heat</td><td>Jimmy Butler</td><td>22.9</td></tr>
-                <tr><td>Milwaukee Bucks</td><td>Giannis Antetokounmpo</td><td>32.4</td></tr>
-                <tr><td>Minnesota Timberwolves</td><td>Anthony Edwards</td><td>27.0</td></tr>
-                <tr><td>New Orleans Pelicans</td><td>Zion Williamson</td><td>25.0</td></tr>
-                <tr><td>New York Knicks</td><td>Jalen Brunson</td><td>24.0</td></tr>
-                <tr><td>Oklahoma City Thunder</td><td>Shai Gilgeous-Alexander</td><td>28.0</td></tr>
-                <tr><td>Orlando Magic</td><td>Franz Wagner</td><td>19.7</td></tr>
-                <tr><td>Philadelphia 76ers</td><td>Tyrese Maxey</td><td>25.9</td></tr>
-                <tr><td>Phoenix Suns</td><td>Devin Booker</td><td>26.0</td></tr>
-                <tr><td>Portland Trail Blazers</td><td>Damian Lillard</td><td>25.0</td></tr>
-                <tr><td>Sacramento Kings</td><td>De'Aaron Fox</td><td>25.0</td></tr>
-                <tr><td>San Antonio Spurs</td><td>Victor Wembanyama</td><td>22.0</td></tr>
-                <tr><td>Toronto Raptors</td><td>Pascal Siakam</td><td>22.0</td></tr>
-                <tr><td>Utah Jazz</td><td>Lauri Markkanen</td><td>24.0</td></tr>
-                <tr><td>Washington Wizards</td><td>Jordan Poole</td><td>20.0</td></tr>
-            </tbody>
-        </table>
+        <h2>Best Players and Their Points Per Game</h2>
+        <div class="content-grid">
+            <!-- Table on the Left -->
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th>Best Player</th>
+                            <th>PPG (2023-24)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Atlanta Hawks</td><td>Trae Young</td><td>26.2</td></tr>
+                        <tr><td>Boston Celtics</td><td>Jayson Tatum</td><td>30.1</td></tr>
+                        <tr><td>Brooklyn Nets</td><td>Mikal Bridges</td><td>19.6</td></tr>
+                        <tr><td>Charlotte Hornets</td><td>LaMelo Ball</td><td>31.1</td></tr>
+                        <tr><td>Chicago Bulls</td><td>Zach LaVine</td><td>24.8</td></tr>
+                        <tr><td>Cleveland Cavaliers</td><td>Donovan Mitchell</td><td>23.6</td></tr>
+                        <tr><td>Dallas Mavericks</td><td>Luka Dončić</td><td>29.0</td></tr>
+                        <tr><td>Denver Nuggets</td><td>Nikola Jokić</td><td>25.1</td></tr>
+                        <tr><td>Detroit Pistons</td><td>Cade Cunningham</td><td>20.0</td></tr>
+                        <tr><td>Golden State Warriors</td><td>Stephen Curry</td><td>25.0</td></tr>
+                        <tr><td>Houston Rockets</td><td>Alperen Şengün</td><td>21.1</td></tr>
+                        <tr><td>Indiana Pacers</td><td>Tyrese Haliburton</td><td>20.7</td></tr>
+                        <tr><td>Los Angeles Clippers</td><td>Kawhi Leonard</td><td>23.0</td></tr>
+                        <tr><td>Los Angeles Lakers</td><td>Anthony Davis</td><td>25.0</td></tr>
+                        <tr><td>Memphis Grizzlies</td><td>Ja Morant</td><td>26.0</td></tr>
+                        <tr><td>Miami Heat</td><td>Jimmy Butler</td><td>22.9</td></tr>
+                        <tr><td>Milwaukee Bucks</td><td>Giannis Antetokounmpo</td><td>32.4</td></tr>
+                        <tr><td>Minnesota Timberwolves</td><td>Anthony Edwards</td><td>27.0</td></tr>
+                        <tr><td>New Orleans Pelicans</td><td>Zion Williamson</td><td>25.0</td></tr>
+                        <tr><td>New York Knicks</td><td>Jalen Brunson</td><td>24.0</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Comparison Section on the Right -->
+            <div>
+                <h3>Compare Players</h3>
+                <form id="compare-players">
+                    <label for="player1">Player 1:</label>
+                    <select id="player1">
+                        <option value="Nikola Jokic">Nikola Jokic</option>
+                        <option value="LeBron James">LeBron James</option>
+                        <option value="Stephen Curry">Stephen Curry</option>
+                    </select>
+                    vs.
+                    <label for="player2">Player 2:</label>
+                    <select id="player2">
+                        <option value="Giannis Antetokounmpo">Giannis Antetokounmpo</option>
+                        <option value="Jayson Tatum">Jayson Tatum</option>
+                        <option value="Kevin Durant">Kevin Durant</option>
+                    </select>
+                    <button type="button" onclick="compareStats()">Compare</button>
+                </form>
+                <div id="comparison-results"></div>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 NBA Team Rankings</p>
     </footer>
+
+    <script>
+        function compareStats() {
+            const player1 = document.getElementById("player1").value;
+            const player2 = document.getElementById("player2").value;
+
+            const stats = {
+                "Nikola Jokic": { ppg: 25.1, rpg: 11.0, apg: 9.9 },
+                "LeBron James": { ppg: 28.9, rpg: 8.0, apg: 7.2 },
+                "Stephen Curry": { ppg: 30.5, rpg: 6.0, apg: 6.5 },
+                "Giannis Antetokounmpo": { ppg: 32.4, rpg: 12.3, apg: 5.4 },
+                "Jayson Tatum": { ppg: 30.1, rpg: 8.8, apg: 4.5 },
+                "Kevin Durant": { ppg: 29.8, rpg: 7.1, apg: 5.8 }
+            };
+
+            const player1Stats = stats[player1];
+            const player2Stats = stats[player2];
+
+            const resultsDiv = document.getElementById("comparison-results");
+            resultsDiv.innerHTML = `
+                <h3>Comparison</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>PPG</th>
+                            <th>RPG</th>
+                            <th>APG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>${player1}</td>
+                            <td>${player1Stats.ppg}</td>
+                            <td>${player1Stats.rpg}</td>
+                            <td>${player1Stats.apg}</td>
+                        </tr>
+                        <tr>
+                            <td>${player2}</td>
+                            <td>${player2Stats.ppg}</td>
+                            <td>${player2Stats.rpg}</td>
+                            <td>${player2Stats.apg}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `;
+        }
+    </script>
 </body>
 </html>

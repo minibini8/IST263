@@ -20,7 +20,7 @@ header {
 }
 
 nav a {
-  color: #ff4500;
+  color: black; /* Changed from red (#ff4500) to black */
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
@@ -28,7 +28,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-  color: #f4a261;
+  color: #f4a261; /* Retained hover color */
 }
 
 main {
@@ -39,12 +39,45 @@ main {
 main img {
   max-width: 100%;
   height: auto;
-  margin-top: 20px;
+  margin: 20px auto;
   display: block;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 section {
-  margin-bottom: 40px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2em;
+  color: #0046ad;
+  border-bottom: 2px solid #ff4500;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
 }
 
 footer {
@@ -54,7 +87,6 @@ footer {
   color: white;
   margin-top: 20px;
 }
-
 
 table {
   margin: 20px auto;
@@ -80,7 +112,6 @@ th {
   color: white;
 }
 
-
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -104,7 +135,6 @@ th {
     padding: 8px;
   }
 }
-
 
 @media (max-width: 480px) {
   h1, h2 {
