@@ -58,18 +58,10 @@
                 <h3>Compare Players</h3>
                 <form id="compare-players">
                     <label for="player1">Player 1:</label>
-                    <select id="player1">
-                        <option value="Nikola Jokic">Nikola Jokic</option>
-                        <option value="LeBron James">LeBron James</option>
-                        <option value="Stephen Curry">Stephen Curry</option>
-                    </select>
+                    <select id="player1"></select>
                     vs.
                     <label for="player2">Player 2:</label>
-                    <select id="player2">
-                        <option value="Giannis Antetokounmpo">Giannis Antetokounmpo</option>
-                        <option value="Jayson Tatum">Jayson Tatum</option>
-                        <option value="Kevin Durant">Kevin Durant</option>
-                    </select>
+                    <select id="player2"></select>
                     <button type="button" onclick="compareStats()">Compare</button>
                 </form>
                 <div id="comparison-results"></div>
@@ -81,18 +73,53 @@
     </footer>
 
     <script>
+        const stats = {
+            "Trae Young": { ppg: 26.2, rpg: 3.9, apg: 10.1 },
+            "Jayson Tatum": { ppg: 30.1, rpg: 8.8, apg: 4.5 },
+            "Mikal Bridges": { ppg: 19.6, rpg: 4.5, apg: 3.6 },
+            "LaMelo Ball": { ppg: 31.1, rpg: 6.1, apg: 8.4 },
+            "Zach LaVine": { ppg: 24.8, rpg: 4.6, apg: 4.1 },
+            "Donovan Mitchell": { ppg: 23.6, rpg: 4.4, apg: 4.5 },
+            "Luka Dončić": { ppg: 29.0, rpg: 8.4, apg: 7.9 },
+            "Nikola Jokić": { ppg: 25.1, rpg: 11.0, apg: 9.9 },
+            "Cade Cunningham": { ppg: 20.0, rpg: 5.6, apg: 6.2 },
+            "Stephen Curry": { ppg: 25.0, rpg: 5.4, apg: 6.1 },
+            "Alperen Şengün": { ppg: 21.1, rpg: 8.9, apg: 4.2 },
+            "Tyrese Haliburton": { ppg: 20.7, rpg: 3.9, apg: 10.3 },
+            "Kawhi Leonard": { ppg: 23.0, rpg: 6.5, apg: 3.9 },
+            "Anthony Davis": { ppg: 25.0, rpg: 12.1, apg: 2.7 },
+            "Ja Morant": { ppg: 26.0, rpg: 5.9, apg: 7.3 },
+            "Jimmy Butler": { ppg: 22.9, rpg: 5.5, apg: 5.9 },
+            "Giannis Antetokounmpo": { ppg: 32.4, rpg: 12.3, apg: 5.4 },
+            "Anthony Edwards": { ppg: 27.0, rpg: 5.9, apg: 4.2 },
+            "Zion Williamson": { ppg: 25.0, rpg: 7.0, apg: 3.6 },
+            "Jalen Brunson": { ppg: 24.0, rpg: 3.5, apg: 6.2 }
+        };
+
+        const playerList = Object.keys(stats);
+
+        // Populate dropdowns dynamically
+        document.addEventListener("DOMContentLoaded", () => {
+            const player1Dropdown = document.getElementById("player1");
+            const player2Dropdown = document.getElementById("player2");
+
+            playerList.forEach(player => {
+                const option1 = document.createElement("option");
+                option1.value = player;
+                option1.textContent = player;
+
+                const option2 = document.createElement("option");
+                option2.value = player;
+                option2.textContent = player;
+
+                player1Dropdown.appendChild(option1);
+                player2Dropdown.appendChild(option2);
+            });
+        });
+
         function compareStats() {
             const player1 = document.getElementById("player1").value;
             const player2 = document.getElementById("player2").value;
-
-            const stats = {
-                "Nikola Jokic": { ppg: 25.1, rpg: 11.0, apg: 9.9 },
-                "LeBron James": { ppg: 28.9, rpg: 8.0, apg: 7.2 },
-                "Stephen Curry": { ppg: 30.5, rpg: 6.0, apg: 6.5 },
-                "Giannis Antetokounmpo": { ppg: 32.4, rpg: 12.3, apg: 5.4 },
-                "Jayson Tatum": { ppg: 30.1, rpg: 8.8, apg: 4.5 },
-                "Kevin Durant": { ppg: 29.8, rpg: 7.1, apg: 5.8 }
-            };
 
             const player1Stats = stats[player1];
             const player2Stats = stats[player2];
