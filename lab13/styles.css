@@ -1,4 +1,9 @@
-/* General Global Settings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
 body {
     background-color: #f5f5f5;
     color: #333333;
@@ -8,24 +13,24 @@ body {
 }
 
 nav {
-    background-color: #003366; /* Dark Blue */
+    background-color: #003366; 
     padding-bottom: 10px;
 }
 
 nav a {
-    color: #ffffff; /* White */
+    color: #ffffff; 
     text-decoration: none;
     margin-right: 10px;
 }
 
 nav a:hover {
-    background-color: #0066cc; /* Light Blue */
+    background-color: #0066cc; 
     color: #ffffff;
     padding: 5px;
 }
 
 h1, h3 {
-    color: #000000; /* Black */
+    color: #000000;
     text-align: center;
     margin: 30px;
 }
@@ -43,7 +48,6 @@ p {
     margin: 20px;
 }
 
-/* Flexbox for Centering */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -66,7 +70,7 @@ p {
 }
 
 .float-image {
-    width: 200px; /* Adjust image size */
+    width: 200px; 
     height: auto;
     margin-bottom: 20px;
 }
@@ -78,12 +82,11 @@ p {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #003366; /* Dark Blue Footer */
-    color: #ffffff; /* White text */
+    background-color: #003366; 
+    color: #ffffff;
     margin-top: 20px;
 }
 
-/* Zebra Striping for Tables */
 table {
     width: 60%;
     margin: 20px auto;
@@ -97,8 +100,8 @@ th, td {
 }
 
 table th {
-    background-color: #003366; /* Dark blue for headers */
-    color: white; /* White text for contrast */
+    background-color: #003366; 
+    color: white; 
 }
 
 table td {
@@ -106,15 +109,13 @@ table td {
 }
 
 table tr:nth-child(even) {
-    background-color: #f2f2f2; /* Light gray for alternate rows */
+    background-color: #f2f2f2; 
 }
 
-/* Styling Links */
 a:visited {
-    color: #cccccc; /* Example visited link color */
+    color: #cccccc; 
 }
 
-/* Added Flexbox and Article Layout */
 .part2 {
     display: flex;
 }
@@ -122,8 +123,8 @@ a:visited {
 .article1 {
     flex: 2;
     order: 3;
-    background-color: #cce5ff; /* Light blue background */
-    border-radius: 1em; /* Rounded corners */
+    background-color: #cce5ff; 
+    border-radius: 1em; 
 }
 
 .article2 {
@@ -144,10 +145,9 @@ a:visited {
     padding: 20px;
 }
 
-/* Flexbox for Skills Page */
 .firstrow {
     display: flex;
-    background-color: #ffa94d; /* Darker peach for better contrast */
+    background-color: #ffa94d; 
     padding: 20px;
     border-radius: 15px;
 }
@@ -159,8 +159,8 @@ a:visited {
 
 .skillstable table {
     margin: 0 auto;
-    background-color: #cce5ff; /* Light blue background */
-    border: 2px solid #003366; /* Border color */
+    background-color: #cce5ff; 
+    border: 2px solid #003366; 
     border-radius: 15px;
 }
 
@@ -170,18 +170,16 @@ a:visited {
 }
 
 .skillsimage img {
-    width: 200px; /* Increase the size of the image */
+    width: 200px; 
     height: auto;
 }
 
-/* Responsive Image */
 .responsive-img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-/* Skip to Content Button */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -200,12 +198,10 @@ a:visited {
     left: 10px;
 }
 
-/* Accessibility Enhancements for Tables */
 .evenrow {
-    background-color: #f2f2f2; /* Light gray for even rows */
+    background-color: #f2f2f2; 
 }
 
-/* Wrapper for Flexbox Grids */
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -220,7 +216,6 @@ a:visited {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Query for Responsive Navigation */
 @media (max-width: 768px) {
     nav a {
         display: block;
@@ -229,6 +224,6 @@ a:visited {
         text-align: center;
     }
     nav span {
-        display: none; /* Hides the separator in smaller viewports */
+        display: none; 
     }
 }
