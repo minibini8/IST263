@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA Star Players</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <header>
@@ -18,7 +19,6 @@
     <main>
         <h2>Best Players and Their Points Per Game</h2>
         <div class="content-grid">
-            <!-- Table on the Left -->
             <div>
                 <table>
                     <thead>
@@ -53,7 +53,6 @@
                 </table>
             </div>
 
-            <!-- Comparison Section on the Right -->
             <div>
                 <h3>Compare Players</h3>
                 <form id="compare-players">
@@ -98,7 +97,6 @@
 
         const playerList = Object.keys(stats);
 
-        // Populate dropdowns dynamically
         document.addEventListener("DOMContentLoaded", () => {
             const player1Dropdown = document.getElementById("player1");
             const player2Dropdown = document.getElementById("player2");
