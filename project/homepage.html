@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <script>
-        // Data for featured teams
         const teams = [
             {
                 name: "Denver Nuggets",
@@ -36,10 +35,7 @@
             }
         ];
 
-        // Pick a random featured team
         const featuredTeam = teams[Math.floor(Math.random() * teams.length)];
-
-        // Dynamically populate the featured team data
         document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("featured-team-name").textContent = featuredTeam.name;
             document.getElementById("featured-team-description").textContent = featuredTeam.description;

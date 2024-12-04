@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -58,21 +57,21 @@ table th {
 }
 
 ul {
-  list-style-type: none; /* Removes bullet points */
+  list-style-type: none; 
   padding: 0;
 }
 
 ul li {
-  margin: 10px 0; /* Adds spacing between list items */
-  text-align: center; /* Aligns text to the center */
-  font-size: 1.1rem; /* Adjusts font size for better readability */
+  margin: 10px 0; 
+  text-align: center; 
+  font-size: 1.1rem; 
 }
 
 .video-container {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Adds spacing between video frames */
-  flex-wrap: wrap; /* Allows videos to wrap on smaller screens */
+  gap: 20px; 
+  flex-wrap: wrap; 
 }
 
 iframe {
