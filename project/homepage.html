@@ -43,29 +43,34 @@
             document.getElementById("featured-team-name").textContent = featuredTeam.name;
             document.getElementById("featured-team-description").textContent = featuredTeam.description;
             document.getElementById("featured-team-image").src = featuredTeam.image;
-            document.getElementById("featured-team-image").alt = featuredTeam.name;
+            document.getElementById("featured-team-image").alt = featuredTeam.name + " team logo";
         });
     </script>
 </head>
 <body>
-    <header>
+    <!-- Banner Landmark -->
+    <header role="banner">
         <h1>NBA Team Rankings</h1>
         <nav>
-            <a href="homepage.html">Home</a>
-            <a href="rank.html">Team Rankings</a>
-            <a href="players.html">Star Players</a>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="rank.html">Team Rankings</a></li>
+                <li><a href="players.html">Star Players</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
+
+    <!-- Main Content -->
+    <main role="main">
         <section class="intro-section">
             <h2>Welcome to NBA Team Rankings</h2>
             <p>Your ultimate destination for in-depth analysis and rankings of the best NBA teams and players!</p>
-            <img src="Homepage.jpg" alt="NBA Homepage Image" width="400">
+            <img src="Homepage.jpg" alt="NBA official logo" width="400">
         </section>
         <section class="featured-team-section">
             <h2>Featured Team: <span id="featured-team-name"></span></h2>
             <p id="featured-team-description"></p>
-            <img id="featured-team-image" src="default.jpg" alt="Featured Team" width="400">
+            <img id="featured-team-image" src="default.jpg" alt="Featured team logo" width="400">
         </section>
         <section class="player-highlights">
             <h2>Player Highlights</h2>
@@ -106,7 +111,9 @@
             </ul>
         </section>
     </main>
-    <footer>
+
+    <!-- Footer Landmark -->
+    <footer role="contentinfo">
         <p>&copy; 2024 NBA Team Rankings</p>
     </footer>
 </body>
