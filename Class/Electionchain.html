@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectionChain</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #002868; /* Navy blue */
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-logo {
+            max-height: 80px; /* Ensure the logo fits well */
+            max-width: 80px; /* Maintain aspect ratio */
+        }
+        .header-content {
+            text-align: center;
+            flex: 1;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .flex-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .box {
+            flex: 1 1 calc(33.33% - 1rem);
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .box h2 {
+            margin-top: 0;
+            color: #bf0a30; /* Red */
+        }
+        button {
+            background-color: #bf0a30; /* Red */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #002868; /* Navy blue */
+        }
+        input, select {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #002868;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="pic1.png" alt="ElectionChain Logo" class="header-logo">
+        <div class="header-content">
+            <h1>ElectionChain</h1>
+            <p>Secure and Transparent Blockchain Voting System</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="flex-box">
+            <!-- Governance Section -->
+            <div class="box">
+                <h2>Governance</h2>
+                <button onclick="addCandidate()">Add Candidate</button>
+                <input type="text" id="candidateName" placeholder="Candidate Name">
+                <button onclick="openVoting()">Open Voting</button>
+                <button onclick="closeVoting()">Close Voting</button>
+            </div>
+
+            <!-- Voting Section -->
+            <div class="box">
+                <h2>Cast Vote</h2>
+                <input type="number" id="candidateId" placeholder="Candidate ID">
+                <input type="number" id="tokenId" placeholder="Your NFT Token ID">
+                <button onclick="castVote()">Vote</button>
+            </div>
+
+            <!-- Results Section -->
+            <div class="box">
+                <h2>View Results</h2>
+                <input type="number" id="viewCandidateId" placeholder="Candidate ID">
+                <button onclick="getCandidate()">View Candidate</button>
+                <p id="candidateResult"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 ElectionChain | Powered by Blockchain</p>
+    </div>
+
+    <script>
+        // Placeholder contract interaction
+        function addCandidate() {
+            const name = document.getElementById('candidateName').value;
+            alert(`Candidate "${name}" added successfully.`);
+        }
+
+        function openVoting() {
+            alert('Voting is now open.');
+        }
+
+        function closeVoting() {
+            alert('Voting is now closed.');
+        }
+
+        function castVote() {
+            const candidateId = document.getElementById('candidateId').value;
+            const tokenId = document.getElementById('tokenId').value;
+            alert(`Vote cast for Candidate ID: ${candidateId} using Token ID: ${tokenId}`);
+        }
+
+        function getCandidate() {
+            const candidateId = document.getElementById('viewCandidateId').value;
+            document.getElementById('candidateResult').innerText = 
+                `Candidate ID: ${candidateId}\nName: Alice (Example)\nVotes: 10 (Example)`;
+        }
+    </script>
+</body>
+</html>

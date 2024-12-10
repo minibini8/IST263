@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Lines</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ADD8E6;
+            color: black;
+            border-radius: 8px;
+            padding: 16px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            margin: 0 0 8px;
+        }
+
+        .card p {
+            margin: 4px 0;
+        }
+
+        .card .market {
+            margin-top: 12px;
+        }
+
+        .card .market h3 {
+            margin: 8px 0 4px;
+            font-size: 1.1em;
+        }
+
+        .card .outcome {
+            margin-left: 8px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; margin: 20px 0;">Live Lines</h1>
+    <div class="container" id="live-lines">
+        <!-- Betting lines will be dynamically inserted here -->
+    </div>
+
+    <script>
+        const apiUrl = "https://api.sportsdata.io/v3/nba/odds/json/InGameLineMovement/{gameid}/{sportsbookgroup}?key=cc376a9bfff74f3e88b9f7c8651aa708";
+        const gameId = "12780"; // Replace with your GameID from the Games API
+        const sportsbookGroup = "G1100"; // Replace with the specific Sportsbook group
+
+        async function fetchLiveLines() {
+            try {
+                const response = await fetch(apiUrl.replace("{gameid}", gameId).replace("{sportsbookgroup}", sportsbookGroup));
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                const container = document.getElementById('live-lines');
+                container.innerHTML = ""; // Clear any existing content
+
+                data.forEach(game => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+
+                    const title = document.createElement('h2');
+                    title.textContent = `Game ID: ${game.GameId}`;
+                    card.appendChild(title);
+
+                    const date = document.createElement('p');
+                    date.textContent = `Date: ${new Date(game.DateTime).toLocaleString()}`;
+                    card.appendChild(date);
+
+                    const lineMovements = document.createElement('div');
+                    lineMovements.className = 'market';
+
+                    const lineHeader = document.createElement('h3');
+                    lineHeader.textContent = 'Line Movements:';
+                    lineMovements.appendChild(lineHeader);
+
+                    game.LineMovements.forEach(line => {
+                        const outcomeDiv = document.createElement('p');
+                        outcomeDiv.className = 'outcome';
+                        outcomeDiv.textContent = `Spread: ${line.PointSpread}, Total: ${line.Total}, Moneyline: ${line.Moneyline}`;
+                        lineMovements.appendChild(outcomeDiv);
+                    });
+
+                    card.appendChild(lineMovements);
+                    container.appendChild(card);
+                });
+
+            } catch (error) {
+                console.error("Error fetching live lines:", error);
+            }
+        }
+
+        fetchLiveLines();
+    </script>
+</body>
+</html>
